@@ -13,7 +13,7 @@ function print(text) {
  */
 function isValid(name) {
   if (name.length > 3) {
-    if (!name.includes(' ')) {
+    if (!name.includes(' ') && !name.includes('null')) {
       return true;
     }
   }
