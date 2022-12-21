@@ -12,9 +12,11 @@ function print(text) {
  * @returns {boolean}
  */
 function isValid(name) {
-  if (name.length > 3) {
-    if (!name.includes(' ') && !name.includes(null)) {
-      return true;
+  if (name) {
+    if (name.length > 3) {
+      if (!name.includes(' ')) {
+        return true;
+      }
     }
   }
   return false;
