@@ -5,5 +5,5 @@ function sumSalary(salaries) {
       sum += obj[key];
     }
   }
-  return console.log(sum)
+  return sum;
 }
