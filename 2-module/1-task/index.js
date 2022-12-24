@@ -1,8 +1,8 @@
 function sumSalary(salaries) {
   let sum = 0;
-  for (const key in obj) {
-    if ( (typeof obj[key] === 'number') && obj[key] && obj[key] !== Infinity && obj[key] !== -Infinity ) {
-      sum += obj[key];
+  for (const key in salaries) {
+    if ( (typeof salaries[key] === 'number') && salaries[key] && salaries[key] !== Infinity && salaries[key] !== -Infinity ) {
+      sum += salaries[key];
     }
   }
   return sum;
