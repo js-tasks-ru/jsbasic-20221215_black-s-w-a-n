@@ -1,8 +1,8 @@
 function initCarousel() {
   let offset = 0;
   let offsetWidth = document.querySelector('.carousel__img').offsetWidth;
-  const leftArrow = document.querySelector('.carousel__arrow_left img');
-  const rightArrow = document.querySelector('.carousel__arrow_right img');
+  const leftArrow = document.querySelector('.carousel__arrow_left');
+  const rightArrow = document.querySelector('.carousel__arrow_right');
   const arrows = document.querySelector('.carousel');
   const slide = document.querySelector('.carousel__inner');
   leftArrow.style.display = 'none';
