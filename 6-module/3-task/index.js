@@ -37,8 +37,6 @@ export default class Carousel {
   }
 
   arrows() {
-    let offset = 0;
-    let offsetWidth = 988;
     const leftArrow = this.elem.querySelector('.carousel__arrow_left');
     const rightArrow = this.elem.querySelector('.carousel__arrow_right');
     const slide = this.elem.querySelector('.carousel__inner');
@@ -47,11 +45,12 @@ export default class Carousel {
     this.elem.addEventListener('click', (event) => {
       
       if (event.target === rightArrow) {
-        offset -= offsetWidth;
-        slide.style.transform = `translateX(${offset}px)`;
         this.count += 1;
+        let offset = -this.elem.offsetWidth * this.count;
+        slide.style.transform = `translateX(${offset}px)`;
+       
 
-        if (offset <= (-offsetWidth * (this.slides.length - 1))) {
+        if (this.count === this.slides.length - 1) {
           event.target.style.display = 'none';
         } else {
           leftArrow.style.display = '';
@@ -59,11 +58,12 @@ export default class Carousel {
       }
 
       if (event.target === leftArrow) {
-        offset += offsetWidth;
-        slide.style.transform = `translateX(${offset}px)`;
         this.count -= 1;
+        let offset = -this.elem.offsetWidth * this.count;
+        slide.style.transform = `translateX(${offset}px)`;
+       
       
-        if (offset >= 0) {
+        if (this.count === 0) {
           event.target.style.display = 'none';
         } else {
           rightArrow.style.display = '';
