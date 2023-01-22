@@ -44,7 +44,6 @@ export default class CartIcon {
       document.querySelector('.container').getBoundingClientRect().right + 20,
       document.documentElement.clientWidth - this.elem.offsetWidth - 10
     ) + 'px';
-    alert(this.elem.getBoundingClientRect().top);
    
     if (window.pageYOffset > initialTopCoord) {
       Object.assign(this.elem.style, {
